@@ -7,6 +7,7 @@ app = Flask(__name__)
 def HelloWorld():
   return r("index.html")
 
+
 @app.route("/login", methods=['POST', 'GET'])
 def login():
   if request.method == "POST":
@@ -15,9 +16,11 @@ def login():
   else:
     return r('login.html')
 
+
 @app.route("/<usr>")
 def user(usr):
   return f"hii, {usr}"
+
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0", debug=True)
