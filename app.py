@@ -24,7 +24,7 @@ def base():
 
 @app.route("/<usr>")
 def user(usr):
-  return f"hii, {usr}"
+  return r('base.html', msgs=f"hii, {usr}")
 
 
 if __name__ == "__main__":
