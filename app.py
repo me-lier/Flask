@@ -17,6 +17,11 @@ def login():
     return r('login.html')
 
 
+@app.route("/base")
+def base():
+  return r("base.html")
+
+
 @app.route("/<usr>")
 def user(usr):
   return f"hii, {usr}"
